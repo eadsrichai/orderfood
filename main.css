@@ -1,0 +1,12 @@
+.welcome {
+    background-color: orange;
+    font-size: 62px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.login {
+    text-align: center;
+}
