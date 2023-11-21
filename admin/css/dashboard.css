@@ -60,6 +60,11 @@ input[type="submit"]{
     border-radius: 5px;
     font-weight: bolder;
 }
+select {
+    padding: 10px;
+    font-size: 20px;
+    color: #0D6EFD;
+}
 
 .sub-menu{
     font-size: 22px;

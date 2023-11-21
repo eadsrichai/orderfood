@@ -5,7 +5,6 @@
     $sql = "SELECT  u.id_user, u.u_user, u.p_user, u.fname_user, u.lname_user, r.name_role ,r.id_role
             FROM    user u,role r
             WHERE   u.id_role = r.id_role    
-            AND     u.status_user like '1'
             AND     u.u_user =?  
             AND     u.p_user =? ";
 

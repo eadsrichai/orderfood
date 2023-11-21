@@ -3,6 +3,7 @@
         $menu = $_GET['menu'];
 
         switch($menu){
+            case '1' : include_once('food-show-data.php'); break;
             case '11' : include_once('food-add-form.php'); break;
             case '12' : include_once('food-edit-form.php'); break;
             case '13' : include_once('food-delete-form.php'); break;
