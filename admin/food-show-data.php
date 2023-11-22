@@ -8,7 +8,7 @@
                 <th>ราคา</th>
                 <th>ประเภทอาหาร</th>
                 <th>ภาพ</th>
-                <th></th>
+                <th colspan="2">ดำเนินการ</th>
                 <th></th>
             </tr>
         </thead>
@@ -37,9 +37,9 @@ while ($row = $result->fetch_assoc()) {
                 <td><?php echo $row['name_type']; ?></td>
                 <td><img src="data/<?php echo $row['img_food']; ?>"></td>
 
-                <td></td>
+                <td>Update</td>
                     
-                <td> </td>
+                <td>Delete</td>
                    
 <?php
 }

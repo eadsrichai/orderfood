@@ -35,8 +35,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == "save") {
 
     include_once('../system/db.php');
 
-    $sql1 = "INSERT INTO food(name_food,detail_food,price_food,id_type,img_food)
-    VALUES('$name_food','$detail_food','$price_food','$id_type','$uniqueFileName')";
+    $sql1 = "INSERT INTO food(name_food,detail_food,price_food,img_food,status_food,id_type)
+    VALUES('$name_food','$detail_food','$price_food','$uniqueFileName','1','$id_type')";
 
 
     $stmt = $conn->prepare($sql1);
