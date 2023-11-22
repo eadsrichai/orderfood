@@ -1,3 +1,12 @@
+
+<?php 
+    session_start(); 
+    // if(isset($_SESSION['u']) 
+    // && $_SESSION['u'] == null 
+    // && isset($_SESSION['p']) 
+    // && $_SESSION['p'] == null){
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,3 +32,6 @@
     </section>
 </body>
 </html>
+
+
+<?php ?> 

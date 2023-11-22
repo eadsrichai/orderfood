@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Nov 22, 2023 at 07:44 AM
+-- Generation Time: Nov 22, 2023 at 02:39 PM
 -- Server version: 10.10.2-MariaDB
 -- PHP Version: 8.0.26
 
@@ -38,16 +38,18 @@ CREATE TABLE IF NOT EXISTS `food` (
   `id_type` int(11) NOT NULL,
   PRIMARY KEY (`id_food`),
   KEY `id_type` (`id_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `food`
 --
 
 INSERT INTO `food` (`id_food`, `name_food`, `detail_food`, `price_food`, `img_food`, `status_food`, `id_type`) VALUES
-(4, 'ข้าวผัดปู', 'ข้าวผัดปู ร้อน ๆ ปูสด จากทะเลอ่าวไทย\r\nให้คุณค่าโปรตินสูง', 150, '', '1', 6),
-(5, 'ข้าวเครื่องแกงทะเล', 'ข้าวเครื่องแกงทะเล ประกอบด้วย กุ้่ง หอย ปู ปลา', 100, '', '1', 7),
-(6, 'sdfsdf', 'dsfdsf', 100, '655d87d958a65_1.png', '1', 6);
+(7, 'ข้าวผัดซีฟูด', 'ข้าวผัดซีฟูด กุ้ง หอย ปู ปลา', 150, '655e0bb5739ab_655db2237c9fe_1.png', '1', 7),
+(8, 'ส้มตำ', 'ส้มตำไทย เส้นมะละกอนุ่ม', 150, '655e0d5d8839a_4.jpg', '1', 7),
+(9, 'เปิดย่าง', 'เป็ดย่าง น้ำผึ้ง', 750, '655e0d7a134ce_3.jpg', '1', 7),
+(10, 'แกงจืด', 'แกงจืด เต้าหู้ หมูสับ', 250, '655e0d92e2741_2.jpg', '1', 7),
+(11, 'ผัดกุ้งมะขาม', 'ผัดกุ้งมะขาว หอมกรุ่น', 550, '655e0dbb37b2c_1.jpg', '1', 7);
 
 -- --------------------------------------------------------
 
@@ -75,8 +77,8 @@ CREATE TABLE IF NOT EXISTS `order_food` (
 --
 
 INSERT INTO `order_food` (`order_id`, `id_user`, `id_food`, `date_order`, `quntity_food`, `priec_order`, `status_order`) VALUES
-(1, 1, 4, '2023-11-22 03:50:22', 1, 100, '1'),
-(2, 1, 5, '2023-11-22 03:51:01', 2, 200, '1');
+(1, 1, 9, '2023-11-22 03:50:22', 1, 100, '1'),
+(2, 1, 8, '2023-11-22 03:51:01', 2, 200, '1');
 
 -- --------------------------------------------------------
 

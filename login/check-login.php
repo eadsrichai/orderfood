@@ -25,7 +25,7 @@
             header( "location: admin/index.php?menu=5" );   
             exit(0);
         }else if($_SESSION['id_role'] == '2')  {
-            header("location: user/index.php");
+            header("location: ../user/index.php?menu=1");
             exit(0);
         }else {
             $_SESSION['error'] = "Username or Password ไม่ถูกต้อง";

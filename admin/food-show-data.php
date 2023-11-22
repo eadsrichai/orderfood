@@ -82,7 +82,7 @@ if($_SESSION['error'] != null){ ?>
 </div>
 <?php  } 
 
-if($_SESSION['success'] != null){ ?>
+if(isset($_SESSION['success']) && $_SESSION['success'] != null){ ?>
 <div style="color:green;">
     <?php echo $_SESSION['success'];   $_SESSION['success'] = null; ?>
 </div>
