@@ -7,7 +7,7 @@
     include_once('../system/db.php');
     $sql = "UPDATE order_food SET  quntity_food = ?, price_order = ?  WHERE order_id like ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $price_food,$price_order,$order_id);
+    $stmt->bind_param("sss", $quntity_food,$price_order,$order_id);
   
     
     if(!$stmt->execute()){

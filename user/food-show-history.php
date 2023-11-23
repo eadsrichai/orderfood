@@ -8,10 +8,12 @@
         <?php
     
         include_once('../system/db.php');
+        $id_user = $_SESSION['id_user'];
         $sql = "SELECT  order_food.order_id,order_food.date_order,order_food.quntity_food,
         order_food.price_order,food.name_food,food.img_food,food.id_food
         FROM  order_food,food
-        WHERE order_food.id_food = food.id_food";
+        WHERE order_food.id_food = food.id_food
+        ANd   order_food.id_user like '$id_user'";
 
         $result = $conn->query($sql);
         ?>
