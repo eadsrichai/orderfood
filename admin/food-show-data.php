@@ -76,7 +76,7 @@ while ($row = $result->fetch_assoc()) {
 <hr>
 
 <?php 
-if($_SESSION['error'] != null){ ?>
+if(isset($_SESSION['error']) && $_SESSION['error'] != null){ ?>
 <div style="color:red;">
     <?php echo $_SESSION['error'];   $_SESSION['error'] = null; ?>
 </div>
