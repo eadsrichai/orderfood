@@ -40,7 +40,7 @@ include_once('../system/db.php');
    
             let up = parseInt(document.getElementById("quntity_food").value);
             let sum = parseInt(document.getElementById("price_food").value);
-            let q = document.getElementById("quntity_food").value = up + 1;
+            let q = document.getElementById("quntity_food").value = up;
             document.getElementById("result").value = q * sum;
         
 

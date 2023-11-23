@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Nov 23, 2023 at 10:18 AM
+-- Generation Time: Nov 23, 2023 at 03:02 PM
 -- Server version: 10.10.2-MariaDB
 -- PHP Version: 8.0.26
 
@@ -45,11 +45,8 @@ CREATE TABLE IF NOT EXISTS `food` (
 --
 
 INSERT INTO `food` (`id_food`, `name_food`, `detail_food`, `price_food`, `img_food`, `status_food`, `id_type`) VALUES
-(7, 'ข้าวผัดซีฟูด', 'ข้าวผัดซีฟูด กุ้ง หอย ปู ปลา', 150, '655e0bb5739ab_655db2237c9fe_1.png', '0', 6),
-(8, 'ส้มตำ', 'ส้มตำไทย เส้นมะละกอนุ่ม', 150, '655e0d5d8839a_4.jpg', '1', 7),
-(9, 'เปิดย่าง', 'เป็ดย่าง น้ำผึ้ง', 750, '655e0d7a134ce_3.jpg', '1', 7),
-(13, 'ส้มตำ', 'ส้ำตำมะละกอ ใส่ถั่วคั่ว', 85, '655f1146b7931_655e0d5d8839a_4.jpg', '1', 7),
-(14, 'แกงจืด', 'แกงจืดหมูสับ', 450, '655f116ae44b2_655e0d92e2741_2.jpg', '1', 7);
+(13, 'aaa', 'adfasd', 500, '655f672e3ed3e_655f1146b7931_655e0d5d8839a_4.jpg', '1', 7),
+(14, 'ส้มตำ', 'ส้มตำ ไทย', 500, '655f683a2d40d_655e0d5d8839a_4.jpg', '1', 7);
 
 -- --------------------------------------------------------
 
@@ -70,16 +67,16 @@ CREATE TABLE IF NOT EXISTS `order_food` (
   KEY `order_id` (`order_id`,`id_user`,`id_food`),
   KEY `id_user` (`id_user`),
   KEY `id_food` (`id_food`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `order_food`
 --
 
 INSERT INTO `order_food` (`order_id`, `id_user`, `id_food`, `date_order`, `quntity_food`, `price_order`, `status_order`) VALUES
-(13, 1, 7, '2023-11-23 15:41:04', 2, 300, '1'),
-(14, 1, 9, '2023-11-23 15:41:10', 4, 3000, '1'),
-(15, 2, 14, '2023-11-22 15:54:38', 1, 450, '1');
+(3, 1, 13, '2023-11-23 21:55:14', 3, 1000, '1'),
+(4, 1, 14, '2023-11-23 21:59:09', 1, 500, '1'),
+(6, 1, 14, '2023-11-23 22:01:07', 10, 5000, '1');
 
 -- --------------------------------------------------------
 
@@ -142,15 +139,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id_user`),
   KEY `id_user` (`id_user`,`id_role`),
   KEY `id_role` (`id_role`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `u_user`, `p_user`, `fname_user`, `lname_user`, `email_user`, `tel_user`, `id_role`) VALUES
-(1, 'user1', '1234', 'วุฒิวงศ์', 'เอียดศรีชาย', 'xx@gmail.com', '0926124435', '2'),
-(2, 'user2', '1234', 'คีนูรีฟ', 'อาโน', 'xx@gmail.com', '0926124435', '2');
+(1, 'user1', '1234', 'วุฒิวงศ์', 'เอียดศรีชาย', 'xx@gmail.com', '0926124435', '2');
 
 --
 -- Constraints for dumped tables
