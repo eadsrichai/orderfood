@@ -23,7 +23,7 @@
         while ($row = $result->fetch_assoc()) { ?> 
             <table>
                 <tr>
-                    <td><img style="width:70px;" src="../admin/data/<?php echo $row['img_food']; ?>"></td>
+                    <td><img style="width:70px;" src="../data/<?php echo $row['img_food']; ?>"></td>
                     <td>หมายเลข order <?php echo $row['order_id'];  ?></td>
                     <td>วันที่สั่งซื้อ <?php echo $row['date_order'];  ?></td>
                     <td>จำนวน <?php echo $row['quntity_food'];  ?></td>

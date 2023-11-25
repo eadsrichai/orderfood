@@ -26,7 +26,7 @@
         <tbody>
 
 <?php
-session_start();
+
 include_once('../system/db.php');
 $sql = "SELECT food.id_food,food.name_food,food.detail_food,food.price_food,food.status_food,food.img_food,type_food.name_type
         FROM food,type_food
@@ -46,7 +46,7 @@ while ($row = $result->fetch_assoc()) {
                 <td><?php echo $row['detail_food']; ?></td>
                 <td><?php echo $row['price_food']; ?></td>
                 <td><?php echo $row['name_type']; ?></td>
-                <td><img src="data/<?php echo $row['img_food']; ?>"></td>
+                <td><img src="../data/<?php echo $row['img_food']; ?>"></td>
                 <td><a href="food-update.php?id_food=<?php echo $id_food; ?>">Edit</td>
                 <td><a href="food-delete.php?id_food=<?php echo $id_food; ?>">Delete</td>
                 <td></td>

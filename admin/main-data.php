@@ -16,6 +16,11 @@
             case '41' : include_once('food-report-order-all.php'); break;
             case '42' : include_once('food-report-order-by-date.php'); break;
             case '43' : include_once('food-report-order-by-date-money.php'); break;
+            case '100' : include_once('../login/admin/user-management-form.php'); break;
+            case '101' : include_once('../login/admin/user-update-profile-form.php'); break;
+            case '102' : include_once('../login/admin/changePasswordForm.php'); break;
+            case '103' : include_once('../login/admin/user-management-form.php'); break;
+
         }
     }
 ?>

@@ -4,7 +4,8 @@
     include_once('../system/db.php');
     $sql = "SELECT  u.id_user, u.u_user, u.p_user, u.fname_user, u.lname_user, r.name_role ,r.id_role
             FROM    user u,role r
-            WHERE   u.id_role = r.id_role    
+            WHERE   u.id_role = r.id_role 
+            AND     u.status_user = '1'   
             AND     u.u_user =?  
             AND     u.p_user =? ";
 
@@ -22,20 +23,20 @@
         $_SESSION["lname_user"] = $row["lname_user"];
         $_SESSION["name_role"] = $row["name_role"];
         if($_SESSION['id_role'] == '1') {
-            header( "location: admin/index.php?menu=5" );   
+            header( "location: ../admin/index.php?menu=5" );   
             exit(0);
         }else if($_SESSION['id_role'] == '2')  {
-            header("location: ../user/index.php?menu=1");
+            header("location: ../user/index.php");
             exit(0);
         }else {
             $_SESSION['error'] = "Username or Password ไม่ถูกต้อง";
-            header("Location: login.php");
+            header("Location: index.php");
             exit(0);
         }
     }else {
         session_start();
         $_SESSION['error'] = "Username or Password ไม่ถูกต้อง";
-        header("Location: login.php");
+        header("Location: index.php");
         exit(0);
     }
 ?>

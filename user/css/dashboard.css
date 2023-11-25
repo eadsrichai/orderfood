@@ -42,6 +42,10 @@ ul>li {
     float: right;
     margin-right: 20px;
 }
+.vertical-menu {
+    width: 150px;
+    padding: 20px;
+}
 table tr td {
     padding: 10px;
     font-size: 16px;
@@ -50,10 +54,14 @@ input[type="text"],[type="number"],[type="file"]{
     padding: 10px;
     font-size: 20px;
     color: #0D6EFD;
+    margin: 20px;
     
 }
 input[type="submit"],[type="button"]{
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 20px;
     border:  #0D6EFD;
     background-color: #0D6EFD;
@@ -61,7 +69,17 @@ input[type="submit"],[type="button"]{
     border-radius: 5px;
     font-weight: bolder;
 }
-
+.input-edit {
+    padding: 10px;
+    font-size: 20px;
+    border:  #0D6EFD;
+    text-align: center;
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 80px;
+}
 select {
     padding: 10px;
     font-size: 20px;

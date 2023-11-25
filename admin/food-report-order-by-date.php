@@ -25,7 +25,7 @@ if(isset($_GET['submit']) && ($_GET['submit'] == "SearchByDate")) {
         while ($row = $result->fetch_assoc()) { ?> 
             <table>
                 <tr>
-                    <td><img src="../admin/data/<?php echo $row['img_food']; ?>"></td>
+                    <td><img src="../data/<?php echo $row['img_food']; ?>"></td>
                     <td>รายละเอียด <?php echo $row['detail_food'] ?></td>
                     <td>ราคา <?php echo $row['price_food'] ?> บาท </td>
                     <td>สั่งจำนวน <?php echo $row['quntity_food']; ?>  </td>

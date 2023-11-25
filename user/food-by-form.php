@@ -11,26 +11,22 @@ include_once('../system/db.php');
         <?php
         while ($row = $result->fetch_assoc()) { ?>
             <tr>
-                <td><img src="../admin/data/<?php echo $row['img_food']; ?>"></td>
+                <td><img src="../data/<?php echo $row['img_food']; ?>"></td>
                 
-                <td><?php echo $row['detail_food'] ?> <br>
+                <td>
+                    <?php echo $row['detail_food'] ?> <br>
                     ราคา <?php echo $row['price_food'] ?> บาท <br>
-                   
+               
+                    <input class="input-edit" type="number" readonly value="<?php echo $row['price_food']; ?>"id="price_food"  name="price_food">
+                    <input type="text" class="input-edit" value="1"  name="quntity_food" id="quntity_food"/>
+                    <input type="button" name="number1" id="number1" class="btn"  onclick="add()"  value="+"/>
+                    <input type="button" name="number2" id="number2" class="btn"  onclick="sub()"  value="-"/>
+        
+                    ราคารวม <input type="text" readonly class="input-edit" value="" id="result" name="price_order"  /> 
+                    <input type="hidden" value="<?php echo $row['id_food']; ?>"  name="id_food" >
+                    <input type="hidden" value="<?php echo $_SESSION['id_user']; ?>"  name="id_user" >
+                    <input type="submit" value="ซื้อ" name="submit"/>    
                 </td>
-        </tr>
-        <tr>
-                <td><input size="3" type="number" readonly value="<?php echo $row['price_food']; ?>" 
-                    id="price_food"  name="price_food"></td>
-                <td><input type="number" style="size:4;" value="1"  name="quntity_food" id="quntity_food"/>
-                <input type="button" name="number1" id="number1" class="btn"  onclick="add()"  value="+"/>
-                <input type="button" name="number2" id="number2" class="btn"  onclick="sub()"  value="-"/>
-            </td>
-        </tr>
-        <tr>
-                <td>ราคารวม <input type="text" readonly value="" id="result" name="price_order"  /> </td>
-                <td><input type="hidden" value="<?php echo $row['id_food']; ?>"  name="id_food" ></td>
-                <td><input type="hidden" value="<?php echo $_SESSION['id_user']; ?>"  name="id_user" ></td>
-                <td> <input type="submit" value="sale" name="submit"/>    </td>
             </tr>
         </table>   
         </form>

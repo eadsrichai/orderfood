@@ -1,10 +1,10 @@
 
 <?php 
     session_start(); 
-    // if(isset($_SESSION['u']) 
-    // && $_SESSION['u'] == null 
-    // && isset($_SESSION['p']) 
-    // && $_SESSION['p'] == null){
+    if(isset($_SESSION['u']) 
+    && $_SESSION['u'] != null 
+    && isset($_SESSION['p']) 
+    && $_SESSION['p'] != null){
     ?>
 
 <!DOCTYPE html>
@@ -34,4 +34,7 @@
 </html>
 
 
-<?php ?> 
+<?php }else {
+    header("location: ../login/index.php");
+    exit(0);
+} ?> 

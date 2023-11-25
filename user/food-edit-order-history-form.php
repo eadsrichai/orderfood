@@ -16,29 +16,24 @@
     <?php
     if ($row = $result->fetch_assoc()) { ?>
     <tr>
-    <td><img style="width:200px;" src="../admin/data/<?php echo $row['img_food']; ?>"></td>
+    <td><img style="width:200px;" src="../data/<?php echo $row['img_food']; ?>"></td>
     
-    <td><?php echo $row['detail_food'] ?> <br>
-        ราคา <?php echo $row['price_food'] ?> บาท <br>
-       
-    </td>
-</tr>
-<tr>
-    <td><input type="hidden" value="<?php echo $order_id?>" name="order_id"/></td>
     <td>
-        <input size="3" type="number" readonly value="<?php echo $row['price_food']; ?>" 
+        <?php echo $row['detail_food'] ?> <br> ราคา <?php echo $row['price_food'] ?> บาท <br>
+     
+        <input type="hidden" value="<?php echo $order_id?>" name="order_id"/>
+    
+        <label>ราคาสินค้า</lable>
+        <input  type="number" class="input-edit" readonly value="<?php echo $row['price_food']; ?>" 
         id="price_food"  name="price_food">
+        <label>จำนวนสินค้า</label>
+        <input type="text"  class="input-edit" value="<?php echo $row['quntity_food']; ?>"  name="quntity_food" id="quntity_food"/>
+        <input type="button" name="number1" id="number1"  class=""  onclick="add()"  value="+"/>
+        <input type="button" name="number2" id="number2"  onclick="sub()"  value="-"/>
+         ราคารวม <input type="text" class="input-edit" readonly value="<?php echo $row['price_order']  ?>" id="result" name="price_order"  />
+        <input type="hidden" value="<?php echo $row['id_food']; ?>"  name="id_food" >
+        <input type="submit" value="แก้ไขการสั่งซื้อ" name="submit"/>    
     </td>
-    <td><input type="number" style="size:4;" value="<?php echo $row['quntity_food']; ?>"  name="quntity_food" id="quntity_food"/>
-    <input type="button" name="number1" id="number1" class="btn"  onclick="add()"  value="+"/>
-    <input type="button" name="number2" id="number2" class="btn"  onclick="sub()"  value="-"/>
-</td>
-</tr>
-<tr>
-    <td>ราคารวม <input type="text" readonly value="<?php echo $row['price_order'];  ?>" id="result" name="price_order"  /> </td>
-    <td><input type="hidden" value="<?php echo $row['id_food']; ?>"  name="id_food" ></td>
-   
-    <td> <input type="submit" value="แก้ไขการสั่งซื้อ" name="submit"/>    </td>
 </tr>
 </table>   
     </form>

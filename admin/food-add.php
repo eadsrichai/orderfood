@@ -27,7 +27,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == "save") {
     $uniqueFileName = uniqid() . '_' . $fileName;
 
     // Upload the file to the uploads directory
-    $uploadDir = 'data/';
+    $uploadDir = '../data/';
     if (!move_uploaded_file($fileTmpName, $uploadDir . $uniqueFileName)) {
         echo "Failed to upload file";
         exit;
